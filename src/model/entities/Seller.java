@@ -1,8 +1,10 @@
 package model.entities;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Seller {
+public class Seller implements Serializable {
+	private static final long serialVersionUID = 1L;
 	
 	private Integer id;
 	private String name;
@@ -12,8 +14,7 @@ public class Seller {
 	
 	private Department department;
 	
-	public Seller() {
-		
+	public Seller() {		
 	}
 
 	public Seller(Integer id, String name, String email, Date birthDate, Double baseSalary, Department department) {		
